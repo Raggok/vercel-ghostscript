@@ -5,7 +5,11 @@ export default async function handler(req, res) {
 
   const files = fs
     .readdirSync("./")
-    .map((file) => file + "/" + fs.readdirSync(file));
+    .map((file) =>
+      fs.lstatSync(file).isDirectory()
+        ? file + "/" + fs.readdirSync(file)
+        : file
+    );
 
   res.status(200).json({ files });
 }
