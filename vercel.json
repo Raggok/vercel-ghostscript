@@ -1,6 +1,6 @@
 {
   "functions": {
-    "api/version.js": {
+    "pages/api/version.js": {
       "includeFiles": "libs/ghostscript-10.0.0-linux-x86_64.tgz"
     }
   }
