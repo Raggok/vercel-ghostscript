@@ -1,5 +1,7 @@
 import fs from "fs";
 
+import gszip from "gs.zip";
+
 export default async function handler(req, res) {
   // version: await gs.version()
 
