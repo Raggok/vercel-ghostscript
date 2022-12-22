@@ -1,3 +1,4 @@
+import fs from "fs";
 import path from "path";
 
 export default async function handler(req, res) {
@@ -6,5 +7,5 @@ export default async function handler(req, res) {
   const libsDirectory = path.join(process.cwd(), "libs");
   const gszip = path.join(libsDirectory, "ghostscript-10.0.0-linux-x86_64.tgz");
 
-  res.status(200).json({ gszip });
+  res.status(200).json({ gszip, exists: fs.existsSync(gszip) });
 }
