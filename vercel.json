@@ -2,7 +2,7 @@
   "functions": {
     "pages/api/version.js": {
       "maxDuration": 11,
-      "includeFiles": "gs.zip"
+      "includeFiles": "src/gs.zip"
     }
   }
 }
